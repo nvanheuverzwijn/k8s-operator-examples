@@ -1,0 +1,16 @@
+domain: nvanheuverzwijn.io
+layout:
+- go.kubebuilder.io/v3
+projectName: backup-operator
+repo: github.com/nvanheuverzwijn/backup-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: nvanheuverzwijn.io
+  group: backups
+  kind: BackupClaim
+  path: github.com/nvanheuverzwijn/backups/api/v1beta1
+  version: v1beta1
+version: "3"

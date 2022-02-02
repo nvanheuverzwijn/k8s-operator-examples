@@ -1,0 +1,12 @@
+apiVersion: backups.nvanheuverzwijn.io/v1beta1
+kind: BackupClaim
+metadata:
+  name: backupclaim-sample
+spec:
+  source:
+    s3:
+      bucketName: "db-backup-kt.accp.kronos-crm.com"
+      key: "2021/12/01/abex__109.sql.xz"
+  destination:
+    pod:
+      namePrefix: "nicolasvanheu"

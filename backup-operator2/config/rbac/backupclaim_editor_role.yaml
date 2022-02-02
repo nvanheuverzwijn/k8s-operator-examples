@@ -1,0 +1,24 @@
+# permissions for end users to edit backupclaims.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: backupclaim-editor-role
+rules:
+- apiGroups:
+  - backups.nvanheuverzwijn.io
+  resources:
+  - backupclaims
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - backups.nvanheuverzwijn.io
+  resources:
+  - backupclaims/status
+  verbs:
+  - get

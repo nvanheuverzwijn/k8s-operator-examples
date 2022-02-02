@@ -1,0 +1,20 @@
+# permissions for end users to view backupclaims.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: backupclaim-viewer-role
+rules:
+- apiGroups:
+  - backups.nvanheuverzwijn.io
+  resources:
+  - backupclaims
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - backups.nvanheuverzwijn.io
+  resources:
+  - backupclaims/status
+  verbs:
+  - get
